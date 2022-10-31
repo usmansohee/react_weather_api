@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import "./style.css"
-import Temp from './temp'
 
-const Weather = ({currentWeather}) => {
+const Weather = ({ currentWeather }) => {
 
     const [mainValue, setValue] = useState("")
-    
     const {
         temp,
         humidity,
@@ -18,7 +16,7 @@ const Weather = ({currentWeather}) => {
     } = currentWeather
 
     useEffect(() => {
-      
+
         if (main) {
             switch (main) {
                 case "Haze":
@@ -34,8 +32,8 @@ const Weather = ({currentWeather}) => {
                     setValue("wi-day-sunny")
                     break;
                 case "Clear":
-                     setValue("wi-day-sunny")
-                     break;
+                    setValue("wi-day-sunny")
+                    break;
                 case "Rain":
                     setValue("wi-day-rain")
                     break;
@@ -47,19 +45,13 @@ const Weather = ({currentWeather}) => {
         }
 
     }, [main])
-    
-    console.log(mainValue)
-    
 
-  // converting the seconds into time
-  let sec = sunset;
-  let date = new Date(sec * 1000);
-  let sunset_time = `${date.getHours()}:${date.getMinutes()}`;
-
-    console.log(city)
+    // converting the seconds into time
+    let sec = sunset;
+    let date = new Date(sec * 1000);
+    let sunset_time = `${date.getHours()}:${date.getMinutes()}`
 
     return (
-        
         <>
             <article className='widget'>
                 <div className='weatherIcon'>
