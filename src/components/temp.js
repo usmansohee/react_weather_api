@@ -4,12 +4,11 @@ import Weather from './weather'
 
 const Temp = () => {
 
-    const [searchValue, setSearchValue] = useState("lahore")
+    const [searchValue, setSearchValue] = useState("")
     const [currentWeather, setWeatherData] = useState({})
 
     const getWeatherData = async () => {
         try {
-
             let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}&units=metric&appid=f44c7ac1fcee5b948ce2986949f82982`
             let response = await fetch(url)
             let data = await response.json()
