@@ -37,6 +37,9 @@ const Weather = ({ currentWeather }) => {
                 case "Rain":
                     setValue("wi-day-rain")
                     break;
+                case "Smoke":
+                    setValue("wi-smoke")
+                    break;
 
                 default:
                     setValue("wi-day-sunny");
