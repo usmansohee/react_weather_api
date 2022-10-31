@@ -51,7 +51,9 @@ const Temp = () => {
                         value={searchValue}
                         onChange={(e) => setSearchValue(e.target.value)}
                     ></input>
-                    <button className='searchButton' type='button' onClick={getWeatherData}></button>
+                    <button className='searchButton' type='button' onClick={getWeatherData}>
+                        <p><i className="wi wi-refresh"></i></p>
+                    </button>
                 </div>
             </div>
             <Weather currentWeather={currentWeather} />
